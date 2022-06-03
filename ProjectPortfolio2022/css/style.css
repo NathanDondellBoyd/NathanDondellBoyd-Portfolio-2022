@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ 
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 77px);
+}
+
+body{
+
+    font-family:'Poppins' ,sans-serif ;
+    font-size: 18px;
+    font-size: 1.1em;
+    background-color: black;
+    color: slategrey;
+    line-height: 1;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 3vh;
+    background-color: black;
+    opacity: 1;
+    
+    
+}
+
+.logo{
+    background-color: black;
+    color: snow;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    height: .5em;
+}
+
+.nav-links{
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    overflow: hidden;
+    opacity: 95%;
+    list-style: none;
+
+}
+
+.nav-links a{
+    color: snow;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+
+
+}
+
+.sticky{
+    position: fixed;
+    top: 1;
+    width: 100%;
+
+}
+
+
+.burger{
+     display: none;
+     cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: snow;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+#showcase{
+    background-image: url('../img/connected.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#showcase h1{
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+#showcase .button{
+    font-size: 18px;
+    text-decoration: none;
+    color: red;
+    border: red 1px solid;
+    border-radius: 20px;
+    margin-top: 30px;
+
+}
+
+#showcase .button:hover{
+    background-color: red;
+    color: black;
+
+}
+#skills{
+    height: 100vh;
+}
+
+#bio {
+    padding: 20px;
+    background: slateblue;
+    color: snow;
+    text-align: center;
+    height: 100vh;
+    
+}
+
+#projects{
+    display: flex;
+    height: 100vh;
+}
+
+#projects .box1{
+    background: red;
+    color: white;
+    padding: 20px;
+}
+
+#projects .box2{
+    background: green;
+    color: white;
+    padding: 20px;
+}
+
+#projects .box3{
+    background: blue;
+    color: white;
+    padding: 20px;
+}
+
+#contact {
+    padding: 20px;
+    background-color: black;
+    color: snow;
+    text-align: center;
+    height: 100vh;
+}
+
+#contact .communication{
+    padding: 30px;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+#contact .icons{
+    padding: 50px
+    
+  
+}
+
+
+
+
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+
+    }
+
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes navLinkFade{
+ from {
+     opacity: 0;
+     transform: translateX(50px);
+ }
+
+ to {
+     opacity: 1;
+     transform: translateX(0px);
+ }
+}
+
+.xmove .line1{
+ transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.xmove .line2{
+ opacity: 0;
+}
+
+.xmove .line3{
+ transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+.nav-links li{
+ opacity: 1;
+}
+
+.nav-links li{
+list-style: none;
+}
+
+
+.burger{
+ display: block;
+ cursor: pointer;
+ 
+}
+
+.burger div {
+width: 30px;
+height: 5px;
+background-color:red ;
+margin: 3px;
+transition: all 0.3s ease;
+}
+
+
+.nav-active{
+ transform: translateX(0%);
+}
+
+a,
+i {
+  cursor: pointer;
+  color:snow;
+  
+  
+
+}
+
+
+#projects{
+ padding: 2em 1em 1em;
+ height: 100vh;
+
+}
+
+#projects ul{
+ list-style: none;
+ margin: 0;
+ padding: 0;
+
+}
+
+#projects li{
+ margin-bottom: 1em;
+ background: #fff;
+ color: darkblue;
+ list-style: none;
+}
+.card-content{
+ padding: 1.5em;
+}
+
+
+
+
+/* Desktop*/
+@media screen and (min-width:912px) {
+ body{
+     margin: 0px;
+     padding:0px;
+     box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+}
+
+.nav-links{
+  position: relative;
+  right: 0px;
+  height: 9vh;
+  top:-2vh;
+  background-color:black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around;
+  transform: translateX(0%);
+  transition: none;
+  }
+
+
+
+
+  .nav-links li a{
+      color:snow;
+      opacity: 1;
+      font-size: 14px;
+      letter-spacing: 3px;
+      
+  }
+  
+  .nav-links li{
+   list-style: none;
+  }
+
+
+
+.burger{
+  display: none;
+}
+
+
+
+}
